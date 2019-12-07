@@ -15,6 +15,39 @@ namespace Projekt_na_uczelnie
         public Form1()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+        //bool fullScreenState = false;
+
+        //private void FullScreen_Button(object sender, EventArgs e)
+        //{
+
+        //    if(fullScreenState == false)
+        //    {
+        //        FormBorderStyle = FormBorderStyle.None;
+        //        WindowState = FormWindowState.Maximized;
+        //        TopMost = true;
+        //        fullScreenState = true;
+        //    }
+        //    else
+        //    {
+        //        FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        //        WindowState = FormWindowState.Normal;
+        //        TopMost = false;
+        //        fullScreenState = false;
+        //    }
+
+        //}
     }
 }
