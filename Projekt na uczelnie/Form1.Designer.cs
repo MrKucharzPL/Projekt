@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
+            this.loginText = new System.Windows.Forms.TextBox();
+            this.loginInfo = new System.Windows.Forms.Label();
+            this.passwordText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +52,9 @@
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.RosyBrown;
+            this.LoginPanel.Controls.Add(this.passwordText);
+            this.LoginPanel.Controls.Add(this.loginInfo);
+            this.LoginPanel.Controls.Add(this.loginText);
             this.LoginPanel.Controls.Add(this.loginButton);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LoginPanel.Location = new System.Drawing.Point(0, 0);
@@ -71,6 +77,30 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // loginText
+            // 
+            this.loginText.Location = new System.Drawing.Point(73, 32);
+            this.loginText.Name = "loginText";
+            this.loginText.Size = new System.Drawing.Size(100, 20);
+            this.loginText.TabIndex = 1;
+            this.loginText.TextChanged += new System.EventHandler(this.loginText_TextChanged);
+            // 
+            // loginInfo
+            // 
+            this.loginInfo.AutoSize = true;
+            this.loginInfo.Location = new System.Drawing.Point(9, 98);
+            this.loginInfo.Name = "loginInfo";
+            this.loginInfo.Size = new System.Drawing.Size(40, 13);
+            this.loginInfo.TabIndex = 2;
+            this.loginInfo.Text = "Tu info";
+            // 
+            // passwordText
+            // 
+            this.passwordText.Location = new System.Drawing.Point(73, 71);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(100, 20);
+            this.passwordText.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,6 +113,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
+            this.LoginPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -92,6 +123,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel LoginPanel;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.TextBox loginText;
+        private System.Windows.Forms.Label loginInfo;
+        private System.Windows.Forms.TextBox passwordText;
     }
 }
 
