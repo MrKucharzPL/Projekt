@@ -26,20 +26,39 @@ namespace Projekt_na_uczelnie
             string sqlText = "SELECT * FROM Users WHERE(Login = '" + login + "' AND Password = '" + password + "')";
             string connString = Properties.Settings.Default.conn;
 
+            SqlDataReader reader;
             SqlConnection connection = new SqlConnection(connString);
             if (connection.State != ConnectionState.Open) connection.Open();
 
             SqlCommand loginCommand = new SqlCommand(sqlText, connection);
             if (loginCommand.ExecuteScalar() == null) loginInfo.Text = "błąd logowania";
-            else loginInfo.Text = "zalogowano";
+            else
+            {
+                loginPanel.Visible = false;
+                SqlCommand userData = new SqlCommand(sqlText, connection);
+                reader = userData.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    firstNameLabel.Text = reader.GetString(4);
+                    surNameLabel.Text = reader.GetString(5);
+                    moneyCountLabel.Text = reader.GetValue(3).ToString();
+                }
+
+                loggedPanel.Visible = true;
+            }
 
          
         }
 
-        private void loginText_TextChanged(object sender, EventArgs e)
+        private void registerButton_Click(object sender, EventArgs e)
         {
-
+            registerPanel.Visible = true;
         }
+
+
+
+
 
 
 
