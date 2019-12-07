@@ -31,32 +31,34 @@
             this.categoryPanel = new System.Windows.Forms.Panel();
             this.loginPanel = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginLabel = new System.Windows.Forms.Label();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.loginInfo = new System.Windows.Forms.Label();
             this.loginText = new System.Windows.Forms.TextBox();
             this.loggedPanel = new System.Windows.Forms.Panel();
-            this.firstNameLabel = new System.Windows.Forms.Label();
-            this.surNameLabel = new System.Windows.Forms.Label();
-            this.moneyTextLabel = new System.Windows.Forms.Label();
             this.moneyCountLabel = new System.Windows.Forms.Label();
+            this.moneyTextLabel = new System.Windows.Forms.Label();
+            this.surNameLabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.registerPanel = new System.Windows.Forms.Panel();
-            this.registerButton = new System.Windows.Forms.Button();
-            this.rTopicLabel = new System.Windows.Forms.Label();
-            this.rLoginLabel = new System.Windows.Forms.Label();
-            this.rPasswordLabel = new System.Windows.Forms.Label();
-            this.rRePasswordLabel = new System.Windows.Forms.Label();
-            this.rEmailLabel = new System.Windows.Forms.Label();
-            this.rFirstNameLabel = new System.Windows.Forms.Label();
-            this.rSurNameLabel = new System.Windows.Forms.Label();
-            this.rLoginTxt = new System.Windows.Forms.TextBox();
-            this.rPasswordTxt = new System.Windows.Forms.TextBox();
-            this.rRePasswordTxt = new System.Windows.Forms.TextBox();
-            this.rEmailTxt = new System.Windows.Forms.TextBox();
-            this.rFirstNameTxt = new System.Windows.Forms.TextBox();
+            this.rRegisterBtn = new System.Windows.Forms.Button();
             this.rSurNameTxt = new System.Windows.Forms.TextBox();
+            this.rFirstNameTxt = new System.Windows.Forms.TextBox();
+            this.rEmailTxt = new System.Windows.Forms.TextBox();
+            this.rRePasswordTxt = new System.Windows.Forms.TextBox();
+            this.rPasswordTxt = new System.Windows.Forms.TextBox();
+            this.rLoginTxt = new System.Windows.Forms.TextBox();
+            this.rSurNameLabel = new System.Windows.Forms.Label();
+            this.rFirstNameLabel = new System.Windows.Forms.Label();
+            this.rEmailLabel = new System.Windows.Forms.Label();
+            this.rRePasswordLabel = new System.Windows.Forms.Label();
+            this.rPasswordLabel = new System.Windows.Forms.Label();
+            this.rLoginLabel = new System.Windows.Forms.Label();
+            this.rTopicLabel = new System.Windows.Forms.Label();
+            this.rInfo = new System.Windows.Forms.Label();
             this.categoryPanel.SuspendLayout();
             this.loginPanel.SuspendLayout();
             this.loggedPanel.SuspendLayout();
@@ -108,6 +110,22 @@
             this.loginButton.Text = "Zaloguj";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // registerButton
+            // 
+            this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.registerButton.BackColor = System.Drawing.Color.Gray;
+            this.registerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerButton.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.registerButton.Location = new System.Drawing.Point(0, 114);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(0);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(100, 32);
+            this.registerButton.TabIndex = 6;
+            this.registerButton.Text = "Zarajestruj";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // passwordLabel
             // 
@@ -169,25 +187,15 @@
             this.loggedPanel.TabIndex = 6;
             this.loggedPanel.Visible = false;
             // 
-            // firstNameLabel
+            // moneyCountLabel
             // 
-            this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.firstNameLabel.Location = new System.Drawing.Point(3, 9);
-            this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(79, 21);
-            this.firstNameLabel.TabIndex = 5;
-            this.firstNameLabel.Text = "firstName";
-            // 
-            // surNameLabel
-            // 
-            this.surNameLabel.AutoSize = true;
-            this.surNameLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.surNameLabel.Location = new System.Drawing.Point(3, 32);
-            this.surNameLabel.Name = "surNameLabel";
-            this.surNameLabel.Size = new System.Drawing.Size(74, 21);
-            this.surNameLabel.TabIndex = 6;
-            this.surNameLabel.Text = "surName";
+            this.moneyCountLabel.AutoSize = true;
+            this.moneyCountLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moneyCountLabel.Location = new System.Drawing.Point(96, 118);
+            this.moneyCountLabel.Name = "moneyCountLabel";
+            this.moneyCountLabel.Size = new System.Drawing.Size(19, 21);
+            this.moneyCountLabel.TabIndex = 8;
+            this.moneyCountLabel.Text = "0";
             // 
             // moneyTextLabel
             // 
@@ -199,15 +207,25 @@
             this.moneyTextLabel.TabIndex = 7;
             this.moneyTextLabel.Text = "Stan konta:";
             // 
-            // moneyCountLabel
+            // surNameLabel
             // 
-            this.moneyCountLabel.AutoSize = true;
-            this.moneyCountLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moneyCountLabel.Location = new System.Drawing.Point(96, 118);
-            this.moneyCountLabel.Name = "moneyCountLabel";
-            this.moneyCountLabel.Size = new System.Drawing.Size(19, 21);
-            this.moneyCountLabel.TabIndex = 8;
-            this.moneyCountLabel.Text = "0";
+            this.surNameLabel.AutoSize = true;
+            this.surNameLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.surNameLabel.Location = new System.Drawing.Point(3, 32);
+            this.surNameLabel.Name = "surNameLabel";
+            this.surNameLabel.Size = new System.Drawing.Size(74, 21);
+            this.surNameLabel.TabIndex = 6;
+            this.surNameLabel.Text = "surName";
+            // 
+            // firstNameLabel
+            // 
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.firstNameLabel.Location = new System.Drawing.Point(3, 9);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(79, 21);
+            this.firstNameLabel.TabIndex = 5;
+            this.firstNameLabel.Text = "firstName";
             // 
             // mainPanel
             // 
@@ -220,6 +238,8 @@
             // 
             // registerPanel
             // 
+            this.registerPanel.Controls.Add(this.rInfo);
+            this.registerPanel.Controls.Add(this.rRegisterBtn);
             this.registerPanel.Controls.Add(this.rSurNameTxt);
             this.registerPanel.Controls.Add(this.rFirstNameTxt);
             this.registerPanel.Controls.Add(this.rEmailTxt);
@@ -240,87 +260,70 @@
             this.registerPanel.TabIndex = 0;
             this.registerPanel.Visible = false;
             // 
-            // registerButton
+            // rRegisterBtn
             // 
-            this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.registerButton.BackColor = System.Drawing.Color.Gray;
-            this.registerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registerButton.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.registerButton.Location = new System.Drawing.Point(0, 114);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(0);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(100, 32);
-            this.registerButton.TabIndex = 6;
-            this.registerButton.Text = "Zarajestruj";
-            this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.rRegisterBtn.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rRegisterBtn.Location = new System.Drawing.Point(308, 405);
+            this.rRegisterBtn.Name = "rRegisterBtn";
+            this.rRegisterBtn.Size = new System.Drawing.Size(214, 39);
+            this.rRegisterBtn.TabIndex = 18;
+            this.rRegisterBtn.Text = "Zarejestruj się";
+            this.rRegisterBtn.UseVisualStyleBackColor = true;
+            this.rRegisterBtn.Click += new System.EventHandler(this.rRegisterBtn_Click);
             // 
-            // rTopicLabel
+            // rSurNameTxt
             // 
-            this.rTopicLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rTopicLabel.AutoSize = true;
-            this.rTopicLabel.Font = new System.Drawing.Font("Ebrima", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rTopicLabel.Location = new System.Drawing.Point(297, 9);
-            this.rTopicLabel.Name = "rTopicLabel";
-            this.rTopicLabel.Size = new System.Drawing.Size(358, 65);
-            this.rTopicLabel.TabIndex = 0;
-            this.rTopicLabel.Text = "Panel rejestracji";
+            this.rSurNameTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rSurNameTxt.Location = new System.Drawing.Point(308, 347);
+            this.rSurNameTxt.MaxLength = 14;
+            this.rSurNameTxt.Name = "rSurNameTxt";
+            this.rSurNameTxt.Size = new System.Drawing.Size(214, 33);
+            this.rSurNameTxt.TabIndex = 17;
             // 
-            // rLoginLabel
+            // rFirstNameTxt
             // 
-            this.rLoginLabel.AutoSize = true;
-            this.rLoginLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rLoginLabel.Location = new System.Drawing.Point(134, 138);
-            this.rLoginLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.rLoginLabel.Name = "rLoginLabel";
-            this.rLoginLabel.Size = new System.Drawing.Size(79, 32);
-            this.rLoginLabel.TabIndex = 5;
-            this.rLoginLabel.Text = "Login:";
+            this.rFirstNameTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rFirstNameTxt.Location = new System.Drawing.Point(308, 305);
+            this.rFirstNameTxt.MaxLength = 14;
+            this.rFirstNameTxt.Name = "rFirstNameTxt";
+            this.rFirstNameTxt.Size = new System.Drawing.Size(214, 33);
+            this.rFirstNameTxt.TabIndex = 16;
             // 
-            // rPasswordLabel
+            // rEmailTxt
             // 
-            this.rPasswordLabel.AutoSize = true;
-            this.rPasswordLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rPasswordLabel.Location = new System.Drawing.Point(133, 180);
-            this.rPasswordLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.rPasswordLabel.Name = "rPasswordLabel";
-            this.rPasswordLabel.Size = new System.Drawing.Size(80, 32);
-            this.rPasswordLabel.TabIndex = 7;
-            this.rPasswordLabel.Text = "Hasło:";
+            this.rEmailTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rEmailTxt.Location = new System.Drawing.Point(308, 263);
+            this.rEmailTxt.MaxLength = 14;
+            this.rEmailTxt.Name = "rEmailTxt";
+            this.rEmailTxt.Size = new System.Drawing.Size(214, 33);
+            this.rEmailTxt.TabIndex = 15;
             // 
-            // rRePasswordLabel
+            // rRePasswordTxt
             // 
-            this.rRePasswordLabel.AutoSize = true;
-            this.rRePasswordLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rRePasswordLabel.Location = new System.Drawing.Point(134, 222);
-            this.rRePasswordLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.rRePasswordLabel.Name = "rRePasswordLabel";
-            this.rRePasswordLabel.Size = new System.Drawing.Size(169, 32);
-            this.rRePasswordLabel.TabIndex = 8;
-            this.rRePasswordLabel.Text = "Powtórz hasło:";
+            this.rRePasswordTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rRePasswordTxt.Location = new System.Drawing.Point(308, 221);
+            this.rRePasswordTxt.MaxLength = 14;
+            this.rRePasswordTxt.Name = "rRePasswordTxt";
+            this.rRePasswordTxt.Size = new System.Drawing.Size(214, 33);
+            this.rRePasswordTxt.TabIndex = 14;
             // 
-            // rEmailLabel
+            // rPasswordTxt
             // 
-            this.rEmailLabel.AutoSize = true;
-            this.rEmailLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rEmailLabel.Location = new System.Drawing.Point(133, 264);
-            this.rEmailLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.rEmailLabel.Name = "rEmailLabel";
-            this.rEmailLabel.Size = new System.Drawing.Size(155, 32);
-            this.rEmailLabel.TabIndex = 9;
-            this.rEmailLabel.Text = "Adres e-mail:";
+            this.rPasswordTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rPasswordTxt.Location = new System.Drawing.Point(308, 179);
+            this.rPasswordTxt.MaxLength = 14;
+            this.rPasswordTxt.Name = "rPasswordTxt";
+            this.rPasswordTxt.Size = new System.Drawing.Size(214, 33);
+            this.rPasswordTxt.TabIndex = 13;
             // 
-            // rFirstNameLabel
+            // rLoginTxt
             // 
-            this.rFirstNameLabel.AutoSize = true;
-            this.rFirstNameLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rFirstNameLabel.Location = new System.Drawing.Point(134, 306);
-            this.rFirstNameLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.rFirstNameLabel.Name = "rFirstNameLabel";
-            this.rFirstNameLabel.Size = new System.Drawing.Size(66, 32);
-            this.rFirstNameLabel.TabIndex = 10;
-            this.rFirstNameLabel.Text = "Imię:";
+            this.rLoginTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rLoginTxt.Location = new System.Drawing.Point(308, 137);
+            this.rLoginTxt.MaxLength = 14;
+            this.rLoginTxt.Name = "rLoginTxt";
+            this.rLoginTxt.Size = new System.Drawing.Size(214, 33);
+            this.rLoginTxt.TabIndex = 12;
             // 
             // rSurNameLabel
             // 
@@ -333,59 +336,80 @@
             this.rSurNameLabel.TabIndex = 11;
             this.rSurNameLabel.Text = "Nazwisko:";
             // 
-            // rLoginTxt
+            // rFirstNameLabel
             // 
-            this.rLoginTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rLoginTxt.Location = new System.Drawing.Point(308, 137);
-            this.rLoginTxt.MaxLength = 14;
-            this.rLoginTxt.Name = "rLoginTxt";
-            this.rLoginTxt.Size = new System.Drawing.Size(214, 33);
-            this.rLoginTxt.TabIndex = 12;
+            this.rFirstNameLabel.AutoSize = true;
+            this.rFirstNameLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rFirstNameLabel.Location = new System.Drawing.Point(134, 306);
+            this.rFirstNameLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.rFirstNameLabel.Name = "rFirstNameLabel";
+            this.rFirstNameLabel.Size = new System.Drawing.Size(66, 32);
+            this.rFirstNameLabel.TabIndex = 10;
+            this.rFirstNameLabel.Text = "Imię:";
             // 
-            // rPasswordTxt
+            // rEmailLabel
             // 
-            this.rPasswordTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rPasswordTxt.Location = new System.Drawing.Point(308, 179);
-            this.rPasswordTxt.MaxLength = 14;
-            this.rPasswordTxt.Name = "rPasswordTxt";
-            this.rPasswordTxt.Size = new System.Drawing.Size(214, 33);
-            this.rPasswordTxt.TabIndex = 13;
+            this.rEmailLabel.AutoSize = true;
+            this.rEmailLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rEmailLabel.Location = new System.Drawing.Point(133, 264);
+            this.rEmailLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.rEmailLabel.Name = "rEmailLabel";
+            this.rEmailLabel.Size = new System.Drawing.Size(155, 32);
+            this.rEmailLabel.TabIndex = 9;
+            this.rEmailLabel.Text = "Adres e-mail:";
             // 
-            // rRePasswordTxt
+            // rRePasswordLabel
             // 
-            this.rRePasswordTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rRePasswordTxt.Location = new System.Drawing.Point(308, 221);
-            this.rRePasswordTxt.MaxLength = 14;
-            this.rRePasswordTxt.Name = "rRePasswordTxt";
-            this.rRePasswordTxt.Size = new System.Drawing.Size(214, 33);
-            this.rRePasswordTxt.TabIndex = 14;
+            this.rRePasswordLabel.AutoSize = true;
+            this.rRePasswordLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rRePasswordLabel.Location = new System.Drawing.Point(134, 222);
+            this.rRePasswordLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.rRePasswordLabel.Name = "rRePasswordLabel";
+            this.rRePasswordLabel.Size = new System.Drawing.Size(169, 32);
+            this.rRePasswordLabel.TabIndex = 8;
+            this.rRePasswordLabel.Text = "Powtórz hasło:";
             // 
-            // rEmailTxt
+            // rPasswordLabel
             // 
-            this.rEmailTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rEmailTxt.Location = new System.Drawing.Point(308, 263);
-            this.rEmailTxt.MaxLength = 14;
-            this.rEmailTxt.Name = "rEmailTxt";
-            this.rEmailTxt.Size = new System.Drawing.Size(214, 33);
-            this.rEmailTxt.TabIndex = 15;
+            this.rPasswordLabel.AutoSize = true;
+            this.rPasswordLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rPasswordLabel.Location = new System.Drawing.Point(133, 180);
+            this.rPasswordLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.rPasswordLabel.Name = "rPasswordLabel";
+            this.rPasswordLabel.Size = new System.Drawing.Size(80, 32);
+            this.rPasswordLabel.TabIndex = 7;
+            this.rPasswordLabel.Text = "Hasło:";
             // 
-            // rFirstNameTxt
+            // rLoginLabel
             // 
-            this.rFirstNameTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rFirstNameTxt.Location = new System.Drawing.Point(308, 305);
-            this.rFirstNameTxt.MaxLength = 14;
-            this.rFirstNameTxt.Name = "rFirstNameTxt";
-            this.rFirstNameTxt.Size = new System.Drawing.Size(214, 33);
-            this.rFirstNameTxt.TabIndex = 16;
+            this.rLoginLabel.AutoSize = true;
+            this.rLoginLabel.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rLoginLabel.Location = new System.Drawing.Point(134, 138);
+            this.rLoginLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.rLoginLabel.Name = "rLoginLabel";
+            this.rLoginLabel.Size = new System.Drawing.Size(79, 32);
+            this.rLoginLabel.TabIndex = 5;
+            this.rLoginLabel.Text = "Login:";
             // 
-            // rSurNameTxt
+            // rTopicLabel
             // 
-            this.rSurNameTxt.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rSurNameTxt.Location = new System.Drawing.Point(308, 347);
-            this.rSurNameTxt.MaxLength = 14;
-            this.rSurNameTxt.Name = "rSurNameTxt";
-            this.rSurNameTxt.Size = new System.Drawing.Size(214, 33);
-            this.rSurNameTxt.TabIndex = 17;
+            this.rTopicLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rTopicLabel.AutoSize = true;
+            this.rTopicLabel.Font = new System.Drawing.Font("Ebrima", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rTopicLabel.Location = new System.Drawing.Point(297, 9);
+            this.rTopicLabel.Name = "rTopicLabel";
+            this.rTopicLabel.Size = new System.Drawing.Size(358, 65);
+            this.rTopicLabel.TabIndex = 0;
+            this.rTopicLabel.Text = "Panel rejestracji";
+            // 
+            // rInfo
+            // 
+            this.rInfo.AutoSize = true;
+            this.rInfo.Location = new System.Drawing.Point(308, 467);
+            this.rInfo.Name = "rInfo";
+            this.rInfo.Size = new System.Drawing.Size(25, 13);
+            this.rInfo.TabIndex = 19;
+            this.rInfo.Text = "Info";
             // 
             // Form1
             // 
@@ -441,6 +465,8 @@
         private System.Windows.Forms.Label rPasswordLabel;
         private System.Windows.Forms.Label rLoginLabel;
         private System.Windows.Forms.Label rTopicLabel;
+        private System.Windows.Forms.Button rRegisterBtn;
+        private System.Windows.Forms.Label rInfo;
     }
 }
 

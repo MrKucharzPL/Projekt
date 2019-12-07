@@ -44,17 +44,46 @@ namespace Projekt_na_uczelnie
                     surNameLabel.Text = reader.GetString(5);
                     moneyCountLabel.Text = reader.GetValue(3).ToString();
                 }
-
                 loggedPanel.Visible = true;
-            }
-
-         
+            }      
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
             registerPanel.Visible = true;
         }
+
+        private void rRegisterBtn_Click(object sender, EventArgs e)
+        {
+            string login = rLoginTxt.Text;
+            string password = rPasswordTxt.Text;
+            string rePassword = rRePasswordTxt.Text;
+            string email = rEmailTxt.Text;
+            string firstName = rFirstNameTxt.Text;
+            string surName = rSurNameTxt.Text;
+            string sqlText = "INSERT INTO Users(Login,Password,FirstName,SurName,Email) VALUES";
+            string connString = Properties.Settings.Default.conn;
+
+            if(!String.IsNullOrEmpty(login) && login.Length > 4 &&
+               !String.IsNullOrEmpty(password) && password.Length > 8 &&
+               !String.IsNullOrEmpty(email) && email.Length > 5 &&
+               !String.IsNullOrEmpty(firstName) &&
+               !String.IsNullOrEmpty(surName))
+            {
+                SqlConnection connection = new SqlConnection(connString);
+                if (connection.State != ConnectionState.Open) connection.Open();
+                SqlCommand registerData = new SqlCommand(sqlText, connection);
+                rInfo.Text = "gut";
+            }
+            else
+            {
+                rInfo.Text = "bad";
+            }
+
+
+        }
+
+
 
 
 
