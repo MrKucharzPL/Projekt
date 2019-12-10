@@ -44,6 +44,7 @@
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.registerPanel = new System.Windows.Forms.Panel();
+            this.eMessage0 = new System.Windows.Forms.Label();
             this.rRegisterBtn = new System.Windows.Forms.Button();
             this.rSurNameTxt = new System.Windows.Forms.TextBox();
             this.rFirstNameTxt = new System.Windows.Forms.TextBox();
@@ -58,7 +59,11 @@
             this.rPasswordLabel = new System.Windows.Forms.Label();
             this.rLoginLabel = new System.Windows.Forms.Label();
             this.rTopicLabel = new System.Windows.Forms.Label();
-            this.rInfo = new System.Windows.Forms.Label();
+            this.eMessage1 = new System.Windows.Forms.Label();
+            this.eMessage2 = new System.Windows.Forms.Label();
+            this.eMessage3 = new System.Windows.Forms.Label();
+            this.eMessage4 = new System.Windows.Forms.Label();
+            this.eMessage5 = new System.Windows.Forms.Label();
             this.categoryPanel.SuspendLayout();
             this.loginPanel.SuspendLayout();
             this.loggedPanel.SuspendLayout();
@@ -238,7 +243,12 @@
             // 
             // registerPanel
             // 
-            this.registerPanel.Controls.Add(this.rInfo);
+            this.registerPanel.Controls.Add(this.eMessage5);
+            this.registerPanel.Controls.Add(this.eMessage4);
+            this.registerPanel.Controls.Add(this.eMessage3);
+            this.registerPanel.Controls.Add(this.eMessage2);
+            this.registerPanel.Controls.Add(this.eMessage1);
+            this.registerPanel.Controls.Add(this.eMessage0);
             this.registerPanel.Controls.Add(this.rRegisterBtn);
             this.registerPanel.Controls.Add(this.rSurNameTxt);
             this.registerPanel.Controls.Add(this.rFirstNameTxt);
@@ -259,6 +269,19 @@
             this.registerPanel.Size = new System.Drawing.Size(976, 681);
             this.registerPanel.TabIndex = 0;
             this.registerPanel.Visible = false;
+            // 
+            // eMessage0
+            // 
+            this.eMessage0.AutoSize = true;
+            this.eMessage0.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage0.ForeColor = System.Drawing.Color.Red;
+            this.eMessage0.Location = new System.Drawing.Point(530, 143);
+            this.eMessage0.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage0.Name = "eMessage0";
+            this.eMessage0.Size = new System.Drawing.Size(112, 21);
+            this.eMessage0.TabIndex = 20;
+            this.eMessage0.Text = "Błędny login!";
+            this.eMessage0.Visible = false;
             // 
             // rRegisterBtn
             // 
@@ -402,14 +425,70 @@
             this.rTopicLabel.TabIndex = 0;
             this.rTopicLabel.Text = "Panel rejestracji";
             // 
-            // rInfo
+            // eMessage1
             // 
-            this.rInfo.AutoSize = true;
-            this.rInfo.Location = new System.Drawing.Point(308, 467);
-            this.rInfo.Name = "rInfo";
-            this.rInfo.Size = new System.Drawing.Size(25, 13);
-            this.rInfo.TabIndex = 19;
-            this.rInfo.Text = "Info";
+            this.eMessage1.AutoSize = true;
+            this.eMessage1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage1.ForeColor = System.Drawing.Color.Red;
+            this.eMessage1.Location = new System.Drawing.Point(530, 185);
+            this.eMessage1.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage1.Name = "eMessage1";
+            this.eMessage1.Size = new System.Drawing.Size(113, 21);
+            this.eMessage1.TabIndex = 21;
+            this.eMessage1.Text = "Błędne hasło!";
+            this.eMessage1.Visible = false;
+            // 
+            // eMessage2
+            // 
+            this.eMessage2.AutoSize = true;
+            this.eMessage2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage2.ForeColor = System.Drawing.Color.Red;
+            this.eMessage2.Location = new System.Drawing.Point(530, 227);
+            this.eMessage2.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage2.Name = "eMessage2";
+            this.eMessage2.Size = new System.Drawing.Size(113, 21);
+            this.eMessage2.TabIndex = 22;
+            this.eMessage2.Text = "Błędne hasło!";
+            this.eMessage2.Visible = false;
+            // 
+            // eMessage3
+            // 
+            this.eMessage3.AutoSize = true;
+            this.eMessage3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage3.ForeColor = System.Drawing.Color.Red;
+            this.eMessage3.Location = new System.Drawing.Point(530, 269);
+            this.eMessage3.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage3.Name = "eMessage3";
+            this.eMessage3.Size = new System.Drawing.Size(166, 21);
+            this.eMessage3.TabIndex = 23;
+            this.eMessage3.Text = "Błędny adres e-mail!";
+            this.eMessage3.Visible = false;
+            // 
+            // eMessage4
+            // 
+            this.eMessage4.AutoSize = true;
+            this.eMessage4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage4.ForeColor = System.Drawing.Color.Red;
+            this.eMessage4.Location = new System.Drawing.Point(530, 311);
+            this.eMessage4.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage4.Name = "eMessage4";
+            this.eMessage4.Size = new System.Drawing.Size(106, 21);
+            this.eMessage4.TabIndex = 24;
+            this.eMessage4.Text = "Błędne Imię!";
+            this.eMessage4.Visible = false;
+            // 
+            // eMessage5
+            // 
+            this.eMessage5.AutoSize = true;
+            this.eMessage5.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.eMessage5.ForeColor = System.Drawing.Color.Red;
+            this.eMessage5.Location = new System.Drawing.Point(530, 353);
+            this.eMessage5.Margin = new System.Windows.Forms.Padding(5);
+            this.eMessage5.Name = "eMessage5";
+            this.eMessage5.Size = new System.Drawing.Size(143, 21);
+            this.eMessage5.TabIndex = 25;
+            this.eMessage5.Text = "Błędne nazwisko!";
+            this.eMessage5.Visible = false;
             // 
             // Form1
             // 
@@ -466,7 +545,12 @@
         private System.Windows.Forms.Label rLoginLabel;
         private System.Windows.Forms.Label rTopicLabel;
         private System.Windows.Forms.Button rRegisterBtn;
-        private System.Windows.Forms.Label rInfo;
+        private System.Windows.Forms.Label eMessage0;
+        private System.Windows.Forms.Label eMessage5;
+        private System.Windows.Forms.Label eMessage4;
+        private System.Windows.Forms.Label eMessage3;
+        private System.Windows.Forms.Label eMessage2;
+        private System.Windows.Forms.Label eMessage1;
     }
 }
 
